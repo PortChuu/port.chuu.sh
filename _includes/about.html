@@ -1,0 +1,16 @@
+<section class="page-section bg-primary text-white" id="about">
+  <div class="container {{ include.class }}">
+    <div class="row justify-content-center">
+      <div class="col-lg-8 text-center">
+        <h2 class="mt-0">What is Port Chuu?</h2>
+        <hr class="divider light my-4">
+{% capture about %}
+**Hello there! Thank you for visiting this website!**  Port Chuu (PC) is an online community founded at the dawn of 2020.
+We're still in progress of refining the server and writing our introduction up, so please come back later.
+
+The server is still under construction, so be aware of all the debris that might fall on you!
+{% endcapture %}{{ about | markdownify }}
+      </div>
+    </div>
+  </div>
+</section>

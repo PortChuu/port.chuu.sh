@@ -1,0 +1,12 @@
+<section class="page-section bg-primary"{% if include.id %} id="{{ include.id }}"{% endif %}>
+  <div class="container {{ include.class }}">
+    <div class="row justify-content-center">
+      <div class="col-lg-8 text-center">
+        <h2 class="text-white mt-0">{{ include.title }}</h2>
+        <hr class="divider light my-4">
+        <p class="text-white-50 mb-4">{{ include.description }}</p>
+        <a class="btn btn-light btn-xl main-button{% if include.buttom_link contains '#' %} js-scroll-trigger{% endif %}" href="{{ include.button_link }}">{{ include.button_text }}</a>
+      </div>
+    </div>
+  </div>
+</section>

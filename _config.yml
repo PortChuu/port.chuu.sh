@@ -1,0 +1,24 @@
+# Site settings
+title: Port Chuu
+email: simonorj@outlook.com
+description: Port Chuu website using [Jekyll implemention](https://github.com/volny/creative-theme-jekyll) of the [Creative Theme](https://startbootstrap.com/themes/creative/) template by [Start Bootstrap](https://startbootstrap.com).
+baseurl: ""
+url: "https://port.chuu.sh/"
+
+# Excludes
+exclude:
+  - '*.cmd'
+  - Gemfile
+  - Gemfile.lock
+
+# sass: load node_modules
+sass:
+  style: compressed
+  load_paths:
+    - _sass
+
+plugins:
+  - bootstrap
+
+# Build settings
+markdown: kramdown

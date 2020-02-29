@@ -1,0 +1,33 @@
+{% if page.url == "/" %}
+{% assign pg_isHome = true %}
+{% assign pg_root = "" %}
+{% else %}
+{% assign pg_isHome = false %}
+{% assign pg_root = "/" %}
+{% endif %}
+<nav id="mainNav" class="navbar navbar-expand-md {% if include.navbarColor %}{{ include.navbarColor }} {% else %}navbar-light {% endif %}{% if pg_isHome %}front-page {% endif %}fixed-top">
+  <a class="navbar-brand js-scroll-trigger" href="{% if pg_isHome %}#page-top{% else %}/{% endif %}">Port Chuu</a>
+  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+  <span class="navbar-toggler-icon"></span>
+  </button>
+  <div id="navbarResponsive" class="collapse navbar-collapse">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item">
+        <a class="nav-link js-scroll-trigger" href="{{ pg_root }}#rules">Rules</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link js-scroll-trigger" href="{{ pg_root }}#discord">Discord</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" id="navbarDropdownMC" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#">Minecraft<span class="caret"></span></a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMC">
+          <a class="dropdown-item js-scroll-trigger" href="{{ pg_root }}#minecraft">Server info</a>
+          <a class="dropdown-item" href="/map/">Map</a>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/construct.html">[Under Construction]</a>
+      </li>
+    </ul>
+  </div>
+</nav>

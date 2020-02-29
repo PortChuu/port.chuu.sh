@@ -1,0 +1,114 @@
+// Navbar for Dynmap page
+#mainNav.dynmap-nav {
+  z-index: 121;
+  background-color: rgba($black, .2) !important;
+  .navbar-nav .dropdown-menu {
+    background-color: rgba($black, .2);
+  }
+  @include media-breakpoint-down(sm) {
+    > .navbar-collapse {
+      background-color: rgba($black, .5);
+    }
+  }
+}
+
+// Dynmap styling overrides
+#mcmap {
+  // font
+  font-size: 12px;
+  
+  // Map and names
+  > div.leaflet-container {
+    font-family: $font-family-sans-serif;
+    font-weight: 600;
+    > .leaflet-map-pane > .leaflet-objects-pane > .leaflet-marker-pane {
+      .markerName {
+        text-align: center;
+      }
+    }
+    > .leaflet-control-container > .leaflet-top {
+      top: $navbar-height;
+    }
+  }
+  
+  // Clock - Navbar Mitigation
+  > div.largeclock {
+    z-index: 122;
+    &, .timeofday {
+      height: 50px !important;
+    }
+    .timeofday.digitalclock {
+      font-family: $font-family-monospace;
+    }
+    @include media-breakpoint-between(md,lg) {
+      top: $navbar-height;
+    }
+    @include media-breakpoint-up(xl) {
+      border: none;
+      box-shadow: none;
+    }
+    @include media-breakpoint-down(sm) {
+      border: none;
+      box-shadow: none;
+    }
+  }
+  > div.compass {
+    top: $navbar-height + 20; // originally 20px
+  }
+  
+  // Sidebar Styling
+  > div.sidebar {
+    border-left: 1px solid rgba($white, .3);
+    background-color: rgba($black, .5);
+    padding-top: $navbar-height;
+    > .panel {
+      > .pin {
+        top: $navbar-height + 7; // originally 7px
+      }
+      > fieldset.section {
+        border-top-color: rgba($white, .3);
+        margin: 0 2px;
+        padding: 0 8px;
+        > legend {
+          font-size: 1em;
+          max-width: max-content;
+          margin: 0;
+          padding: 4px;
+        }
+        // Worlds
+        > ul.worldlist > li.world.subsection {
+          clear: none;
+          line-height: 34px;
+          margin: 0;
+          border: none;
+          > ul.maplist {
+            line-height: 1.5;
+            float: right;
+            > li.map.item {
+              float: none;
+              display: inline-block;
+              box-sizing: content-box;
+            }
+          }
+        }
+        // Players
+        > ul.playerlist > li.player {
+          float: none;
+          display: block;
+          height: 30px; // 16 + borders + paddings
+          > .playerIcon {
+            display: inline-block;
+            float: none;
+            img {
+              position: absolute;
+            }
+          }
+          > a {
+            position: absolute;
+            line-height: 16px;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /map/tiles/
+Disallow: /map/js/
+Disallow: /map/standalone/
+Disallow: /map/images/
+Disallow: /map/css/

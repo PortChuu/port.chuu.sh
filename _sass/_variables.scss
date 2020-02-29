@@ -1,0 +1,42 @@
+// Variables
+
+// Color overrides
+
+// Set custom colors
+//   PC Colors
+$pink: #d696a4 !default;
+$red: #c26558 !default;
+$orange: #c38a6d !default;
+$yellow: #d8d13e !default;
+$lime: #b3c78f !default;
+$green: #689676 !default;
+$blue: #82bfbf !default;
+$cyan: #a5dce0 !default;
+$purple: #8b74a6 !default;
+
+//   Discord Colors
+$discord-notquiteblack: #23272A !default;
+$discord-darkbutnotblack: #2c2f33 !default;
+
+//$dark: #7b7c7f !default;
+//$light: #e7e2d8 !default;
+
+
+//$orange: #f4623a !default;
+//$brown: #5c4d42 !default;
+
+// Set Bootstrap colors
+$primary: $blue !default;
+$dark: $discord-darkbutnotblack;
+
+// Font overrides
+$font-family-sans-serif: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
+
+$font-family-base: Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", 'Noto Color Emoji' !default;
+
+$font-family-serif: "Merriweather", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", 'Noto Color Emoji' !default;
+
+$headings-font-family: $font-family-sans-serif !default;
+
+// Custom variables
+$navbar-height: 51px;

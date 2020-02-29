@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Port Chuu</title>
+  <meta name="description" content="Port Chuu is an online Discord community, complete with a semi-vanilla Minecraft server. Feel free to come by!">
+  <meta name="author" content="Simon Chuu">
+	<meta name="keywords" content="port chuu, minecraft">
+  {% include head.html %}
+</head>
+<body id="page-top">
+  {% include nav.html %}
+  {% include masthead.html %}
+  {% include about.html %}
+  {% capture pg_rules %}
+    {% include rules.md %}
+  {% endcapture %}
+  {% include page-section/content.html
+    id="rules"
+    title="Port Chuu Rules"
+    class="ol-space strong-info"
+    contentHTML=pg_rules
+  %}
+  {% include discord-server.html %}
+  {% include page-section/aside.html
+    title="Join the Discord server!"
+    button_link="https://discord.gg/ZUv2gwM"
+    button_text='<i class="fab fa-discord"></i> Join Discord!'
+  %}
+  {% include mc-server.html %}
+  {% comment %}
+    {% include page-section/gallery.html %}
+  {% endcomment %}
+  {% include mc-aside.html %}
+  {% include footer.html %}
+  {% include scripts.html %}
+</body>
+</html>

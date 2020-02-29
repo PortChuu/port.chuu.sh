@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>{{ page.title }} &bull; Port Chuu</title>
+  <meta name="description" content="{{ page.description }}">
+  <meta name="author" content="{{ page.author }}">
+	<meta name="keywords" content="port chuu, {{ page.keywords }}">
+  {% include head.html %}
+</head>
+<body {{ page.body_attr }}>
+  {{ page.content }}
+  {% include scripts.html %}
+</body>
+</html>

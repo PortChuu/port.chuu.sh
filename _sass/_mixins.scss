@@ -1,0 +1,31 @@
+// transparent navbar - for use with navbar and dynmap navbar
+@mixin navbar-white-text() {
+  border-color: rgba($white, .3);
+  .navbar-brand {
+    color: rgba($white, .7);
+    &:hover,
+    &:focus {
+      color: $white;
+    }
+  }
+  .navbar-nav {
+    .dropdown-menu {
+      border-color: rgba($white, .3);
+      > .dropdown-item,
+      > .dropdown-item:focus {
+        color: rgba($white, .7);
+        background-color: transparent;
+        &:hover {
+          color: $white;
+        }
+      }
+    }
+    > li > a,
+    > li > a:focus {
+      color: rgba($white, .7);
+      &:hover {
+        color: $white;
+      }
+    }
+  }
+}
