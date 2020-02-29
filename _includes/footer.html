@@ -2,5 +2,7 @@
   <div class="container">
     <div class="small text-center text-muted">Port Chuu &copy; Simon Chuu, 2020</div>
     <div class="small text-center text-muted">Theme based on <a href="https://github.com/volny/creative-theme-jekyll">Jekyll implementation of the Creative Theme</a> by <a href="https://startbootstrap.com/themes/creative/">Start Bootstrap</a></div>
+    {% if include.text %}<div class="small text-center text-muted">{{ include.text }}</div>{% endif %}
+    <div class="small text-center text-muted">Site hosted with <a href="https://pages.github.com/">GitHub Pages</a> &bull; <a href="https://github.com/PortChuu/port.chuu.sh">Source</a></div>
   </div>
 </footer>
