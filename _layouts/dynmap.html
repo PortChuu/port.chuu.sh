@@ -23,7 +23,7 @@
   {% include head-links.html %}
 </head>
 <body class="bg-dark text-white">
-  {% include nav.html navbarColor="navbar-dark bg-dark" %}
+  {% include navbar.html navbarColor="navbar-dark bg-dark" %}
 {% if page.type == "index" %}
   <noscript class="navbar-pad">
    You need JavaScript enabled to use the Dynamic Map.
@@ -87,7 +87,7 @@
   </div>
 {% endif %}
 
-  {% include scripts.html %}
+  {% include script.html %}
 
 {% if page.type == "index" %}
 	<script type="text/javascript" src="/js/dynmap-override.js"></script>

@@ -8,6 +8,7 @@ url: "https://port.chuu.sh/"
 # Excludes
 exclude:
   - '*.cmd'
+  - bootstrap
   - Gemfile
   - Gemfile.lock
 
@@ -15,10 +16,8 @@ exclude:
 sass:
   style: compressed
   load_paths:
+    - bootstrap/scss
     - _sass
-
-plugins:
-  - bootstrap
 
 # Build settings
 markdown: kramdown
