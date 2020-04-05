@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>{{ page.title }} &bull; Port Chuu</title>
+    <meta name="description" content="{{ page.description }}">
+    <meta name="author" content="{{ page.author }}">
+    <meta name="keywords" content="port chuu, {{ page.keywords }}">
+{% include head.html %}
+    <link rel="stylesheet" href="/res/css/cover.css">
+  </head>
+  <body class="navbar-pad">
+{% include navbar.html %}
+{{ content }}
+{% include footer.html %}
+{% include script.html %}
+  </body>
+</html>

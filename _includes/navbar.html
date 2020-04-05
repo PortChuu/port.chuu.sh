@@ -12,8 +12,12 @@
   </button>
   <div id="navbarResponsive" class="collapse navbar-collapse">
     <ul class="navbar-nav ml-auto">
-      <li class="nav-item">
-        <a class="nav-link js-scroll-trigger" href="{{ pg_root }}#rules">Rules</a>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" id="navbarDropdownMC" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#">Community<span class="caret"></span></a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMC">
+          <a class="dropdown-item js-scroll-trigger" href="{{ pg_root }}#rules">Rules</a>
+          <a class="dropdown-item" href="/report">Report a Problem</a>
+        </div>
       </li>
       <li class="nav-item">
         <a class="nav-link js-scroll-trigger" href="{{ pg_root }}#discord">Discord</a>
@@ -23,6 +27,7 @@
         <div class="dropdown-menu" aria-labelledby="navbarDropdownMC">
           <a class="dropdown-item js-scroll-trigger" href="{{ pg_root }}#minecraft">Server info</a>
           <a class="dropdown-item" href="/map/">Map</a>
+          <a class="dropdown-item" href="/graylist">Apply for Graylist</a>
         </div>
       </li>
       <li class="nav-item">
