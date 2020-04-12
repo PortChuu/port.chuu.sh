@@ -1,31 +1,52 @@
 <!doctype html>
 <html lang="en">
   <head>
-{% include head.html %}
-    <link rel="stylesheet" href="/res/css/cover.css">
-  </head>
-  <body>
-{% include navbar.html %}
-    <div id="cover" class="post-cover"{% if page.color %} style="background-color: {{ page.cover.color }}"{% endif %}>
-{% if page.image %}
-      <div class="cover-image cover-parallax" style="background-image: url('{{ page.image }}');">
-        <div class="darken"></div>
-      </div>
-{% else %}
-      <div class="darken"></div>
+    <title>{{ page.title }} &bull; Port Chuu</title>
+    <meta name="description" content="{{ content | strip_html | truncatewords: 40 }}">
+{% if page.author %}
+    <meta name="author" content="{{ page.author }}">
 {% endif %}
+    <meta name="keywords" content="port chuu, {{ page.tags | join: ", "}}">
+{% include head.html %}
+  </head>
+  <body class="navbar-pad">
+{% include navbar.html %}
+    <div id="cover" class="post-cover text-light" style="background: linear-gradient(to bottom, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.5) 100%),{% if page.header %}{{ page.header }}{% else %}{% comment %}
+Take the color value from _variables.scss file:  $dark
+    {% endcomment %}#343a40{% endif %};"> 
       <div class="container cover-container d-flex p-3 mx-auto flex-column">
         <header class="post-title">
           <div class="inner">
             <h1>{{ page.title }}</h1>
+            <p class="text-muted">Posted {{ page.date | date: "%Y.%m.%d" }}{% if page.author %} by {{ page.author }}{% endif %}{% if page.tags %}<br>tags:{% for tag in page.tags %} <a href="/tags/{{ tag }}">{{ tag }}</a>{% endfor %}{% endif %}</p>
           </div>
         </header>
       </div>
     </div>
-    <div id="content" class="container">
+    <div id="content" class="container py-4 markdownified{% if page.class %} {{ page.class }}{% endif %}">
 {{ content }}
     </div>
+    <div class="py-2 bg-dark">
+      <div class="container">
+        <div class="row justify-content-between">
+          <div class="col-auto">
+{% if page.previous.url %}
+            <a class="btn btn-primary" href="{{page.previous.url}}">&laquo; Previous: {{page.previous.title}}</a>
+{% else %}
+            <a class="btn btn-outline-primary disabled" href="#">First post</a>
+{% endif %}
+          </div>
+          <div class="col-auto">
+{% if page.next.url %}
+            <a class="btn btn-primary" href="{{page.next.url}}">Next: {{page.next.title}} &raquo;</a>
+{% else %}
+            <a class="btn btn-outline-primary disabled" href="#">Last post</a>
+{% endif %}
+          </div>
+        </div>
+      </div>
+    </div>
+{% include footer.html %}
 {% include script.html %}
-    <script src="/res/js/cover.js"></script>
   </body>
 </html>

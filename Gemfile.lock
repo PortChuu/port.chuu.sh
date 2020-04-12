@@ -244,6 +244,7 @@ PLATFORMS
 
 DEPENDENCIES
   github-pages (~> 204)
+  jekyll-redirect-from
   wdm (>= 0.1.0)
 
 BUNDLED WITH

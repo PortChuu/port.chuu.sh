@@ -5,6 +5,9 @@ description: Port Chuu website using [Jekyll implemention](https://github.com/vo
 baseurl: ""
 url: "https://port.chuu.sh/"
 
+plugins:
+  - jekyll-redirect-from
+
 # Excludes
 exclude:
   - '*.cmd'

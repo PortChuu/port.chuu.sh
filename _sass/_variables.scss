@@ -1,35 +1,57 @@
-// Variables
-
 // Color overrides
 
-// Set custom colors
-//   PC Colors
-$pink: #d696a4 !default;
-$red: #c26558 !default;
-$orange: #c38a6d !default;
-$yellow: #d8d13e !default;
-$lime: #b3c78f !default;
-$green: #689676 !default;
-$blue: #82bfbf !default;
-$cyan: #a5dce0 !default;
-$purple: #8b74a6 !default;
+// PC User Colors
+$pcu-pink: #d696a4 !default;
+$pcu-red: #c26558 !default;
+$pcu-orange: #c38a6d !default;
+$pcu-yellow: #d8d13e !default;
+$pcu-lime: #b3c78f !default;
+$pcu-green: #689676 !default;
+$pcu-blue: #82bfbf !default;
+$pcu-cyan: #a5dce0 !default;
+$pcu-purple: #8b74a6 !default;
+$pcu-dark: #7b7c7f !default;
+$pcu-light: #e7e2d8 !default;
 
-//   Discord Colors
+// Discord Colors
 $discord-notquiteblack: #23272A !default;
 $discord-darkbutnotblack: #2c2f33 !default;
+$discord-color: #7289da !default;
 
-//$dark: #7b7c7f !default;
-//$light: #e7e2d8 !default;
+// Minecraft Colors
+$minecraft-color: #625c45 !default;
+
+// PC Web Colors and overrides
+$pc-dark: #2b4141 !default;
+$pc-mute: #508484 !default;
+$pc-main: #00ffb2 !default;
+$pc-main-dark: #1bba82 !default;
+$pc-discord: #a9cef4 !default;
+$pc-minecraft: #6a645c !default;
+
+//$blue:    #007bff !default;
+//$indigo:  #6610f2 !default;
+//$purple:  #6f42c1 !default;
+//$pink:    #e83e8c !default;
+//$red:     #dc3545 !default;
+//$orange:  #fd7e14 !default;
+//$yellow:  #ffc107 !default;
+//$green:   #28a745 !default;
+//$teal:    #20c997 !default;
+//$cyan:    #17a2b8 !default;
 
 
 //$orange: #f4623a !default;
 //$brown: #5c4d42 !default;
 
+
 // Set Bootstrap colors
-$primary: $blue !default;
-$dark: $discord-darkbutnotblack;
+$primary: $pc-main-dark;
+//$dark: $pc-dark;
+//$text-muted: #pc-mute;
 
 // Font overrides
+//$font-size-base: 1.5rem;
 $font-family-sans-serif: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
 
 $font-family-base: Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", 'Noto Color Emoji' !default;

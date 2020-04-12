@@ -1,5 +1,5 @@
-<section class="page-section bg-dark text-white"{% if include.id %} id="{{ include.id }}"{% endif %}>
-  <div class="container text-center {{ include.class }}">
+<section class="page-section {% if include.bg-class %}{{ include.bg-class }}{% else %}bg-dark{% endif %} text-white"{% if include.id %} id="{{ include.id }}"{% endif %}>
+  <div class="container text-center{% if include.class %} {{ include.class }}{% endif %}">
     <h2 class="mb-4">{{ include.title }}</h2>
     <a href="{{ include.button_link }}" class="btn btn-light btn-xl main-button wow tada{% if include.buttom_link contains '#' %} js-scroll-trigger{% endif %}" {{ include.button_attr }}>{{ include.button_text }}</a>
   </div>

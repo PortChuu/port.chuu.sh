@@ -11,24 +11,11 @@
   {% include navbar.html %}
   {% include masthead.html %}
   {% include about.html %}
-  {% capture pg_rules %}
-    {% include rules.md %}
-    <hr class="divider light my-4">
-    <div class="text-center">
-      <p>Need to report a problem?</p>
-      <a href="report" class="btn btn-light side-button wow tada">Report</a>
-    </div>
-  {% endcapture %}
-  {% include page-section/content.html
-    id="rules"
-    title="Port Chuu Rules"
-    class="ol-space strong-info"
-    contentHTML=pg_rules
-  %}
   {% include discord-server.html %}
   {% include page-section/aside.html
     title="Join the Discord server!"
-    button_link="https://discord.gg/ZUv2gwM"
+    bg-class="bg-discord"
+    button_link="https://port.chuu.sh/discord"
     button_text='<i class="fab fa-discord"></i> Join Discord!'
   %}
   {% include mc-server.html %}
