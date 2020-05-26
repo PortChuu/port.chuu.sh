@@ -6,8 +6,12 @@ type: index
 
 To move dynmap:
 1. remove Dynmap's jQuery
-2. move all other scripts down in HTML.
+2. move all the css files to the header for index.
+3. move all other scripts to the bottom of the body for index and login.
+4. delete all directories and copy new ones over.
+5. modify `standalone/config.js` - replace 'standalone/' with 'https://mc.port.chuu.sh/standalone/'.
+6. delete all .php files.
 
-... do the similar for login.html
+Remember to turn all tabs to spaces for dynmap.html file after step 3.
 
 {% endcomment %}
