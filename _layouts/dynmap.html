@@ -4,7 +4,7 @@
 
   <title>Minecraft Map &bull; Port Chuu</title>
 
-  <meta charset="utf-8" />
+  <meta charset="utf-8">
   <meta name="keywords" content="minecraft, map, dynamic, port chuu">
   <meta name="description" content="Minecraft Dynamic Map of the Port Chuu Minecraft server">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -14,9 +14,9 @@
 
   <link rel="icon" href="images/dynmap.ico" type="image/ico">
 
-  <link rel="stylesheet" type="text/css" href="css/leaflet.css?_=3.1-beta-1-367" />
-  <link rel="stylesheet" type="text/css" href="css/standalone.css?_=3.1-beta-1-367" media="screen" />
-  <link rel="stylesheet" type="text/css" href="css/dynmap_style.css?_=3.1-beta-1-367" media="screen" />
+	<link rel="stylesheet" type="text/css" href="css/leaflet.css?_=3.1-beta-2-389" />
+	<link rel="stylesheet" type="text/css" href="css/standalone.css?_=3.1-beta-2-389" media="screen" />
+	<link rel="stylesheet" type="text/css" href="css/dynmap_style.css?_=3.1-beta-2-389" media="screen" />
 
   {% include head-links.html %}
 
@@ -91,64 +91,64 @@
 
 {% if page.type == "index" %}
   <script type="text/javascript" src="/js/dynmap-override.js"></script>
-  <script type="text/javascript" src="js/leaflet.js?_=3.1-beta-1-367"></script>
-  <script type="text/javascript" src="js/custommarker.js?_=3.1-beta-1-367"></script>
-  <script type="text/javascript" src="js/dynmaputils.js?_=3.1-beta-1-367"></script>
-  <script type="text/javascript" src="js/sidebarutils.js?_=3.1-beta-1-367"></script>
-  <script type="text/javascript" src="version.js?_=3.1-beta-1-367"></script>
-  <script type="text/javascript" src="js/jquery.json.js?_=3.1-beta-1-367"></script>
-  <script type="text/javascript" src="js/jquery.mousewheel.js?_=3.1-beta-1-367"></script>
-  <script type="text/javascript" src="js/minecraft.js?_=3.1-beta-1-367"></script>
-  <script type="text/javascript" src="js/map.js?_=3.1-beta-1-367"></script>
-  <script type="text/javascript" src="js/hdmap.js?_=3.1-beta-1-367"></script>
-  <script type="text/javascript" src="standalone/config.js?_=3.1-beta-1-367"></script>
-  <script type="text/javascript">
-      $(document).ready(function() {
-        window.dynmap = new DynMap($.extend({
-          container: $('#mcmap')
-        }, config));
-      });
-  </script>
+	<script type="text/javascript" src="js/leaflet.js?_=3.1-beta-2-389"></script>
+	<script type="text/javascript" src="js/custommarker.js?_=3.1-beta-2-389"></script>
+	<script type="text/javascript" src="js/dynmaputils.js?_=3.1-beta-2-389"></script>
+	<script type="text/javascript" src="js/sidebarutils.js?_=3.1-beta-2-389"></script>
+	<script type="text/javascript" src="version.js?_=3.1-beta-2-389"></script>
+	<script type="text/javascript" src="js/jquery.json.js?_=3.1-beta-2-389"></script>
+	<script type="text/javascript" src="js/jquery.mousewheel.js?_=3.1-beta-2-389"></script>
+	<script type="text/javascript" src="js/minecraft.js?_=3.1-beta-2-389"></script>
+	<script type="text/javascript" src="js/map.js?_=3.1-beta-2-389"></script>
+	<script type="text/javascript" src="js/hdmap.js?_=3.1-beta-2-389"></script>
+	<script type="text/javascript" src="standalone/config.js?_=3.1-beta-2-389"></script>
+	<script type="text/javascript">
+			$(document).ready(function() {
+				window.dynmap = new DynMap($.extend({
+					container: $('#mcmap')
+				}, config));
+			});
+	</script>
 {% else if page.type == "login" %}
-  <script type="text/javascript" src="standalone/config.js?_=3.1-beta-1-367"></script>
-  <script type="text/javascript">
-    $(document).ready(function() {
-      var status = $('#status_message');
-      if(window.location.href.indexOf('error=loginfailed') >= 0)
-        $('<div/>').text('Login Failed ').appendTo(status);
-      if(window.location.href.indexOf('error=verifyfailed') >= 0)
-        $('<div/>').text('Password Verify Error ').appendTo(status);
-      if(window.location.href.indexOf('error=registerfailed') >= 0)
-        $('<div/>').text('Registration failed (bad passcode?) ').appendTo(status);
-      $('form')[0].setAttribute('action', config.url.login);
-      $('form')[1].setAttribute('action', config.url.register);
-      document.forms['login'].elements['j_username'].focus();
-    });
-    
-    $(function(){
+	<script type="text/javascript" src="standalone/config.js?_=3.1-beta-2-389"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			var status = $('#status_message');
+			if(window.location.href.indexOf('error=loginfailed') >= 0)
+				$('<div/>').text('Login Failed ').appendTo(status);
+			if(window.location.href.indexOf('error=verifyfailed') >= 0)
+				$('<div/>').text('Password Verify Error ').appendTo(status);
+			if(window.location.href.indexOf('error=registerfailed') >= 0)
+				$('<div/>').text('Registration failed (bad passcode?) ').appendTo(status);
+			$('form')[0].setAttribute('action', config.url.login);
+			$('form')[1].setAttribute('action', config.url.register);
+			document.forms['login'].elements['j_username'].focus();
+		});
+		
+		$(function(){
             $('form[name=register]').submit(function(){
                 $.post($(this).attr('action'), $(this).serialize(), function(json) {
                     if(json.result == 'success')
-                      window.location = 'index.html';
+                    	window.location = 'index.html';
                     else
-                      window.location = 'login.html?error=' + json.result;
+                    	window.location = 'login.html?error=' + json.result;
                 }, 'json');
                 return false;
             });
         });
 
-    $(function(){
+		$(function(){
             $('form[name=login]').submit(function(){
                 $.post($(this).attr('action'), $(this).serialize(), function(json) {
                     if(json.result == 'success')
-                      window.location = 'index.html';
+                    	window.location = 'index.html';
                     else
-                      window.location = 'login.html?error=' + json.result;
+                    	window.location = 'login.html?error=' + json.result;
                 }, 'json');
                 return false;
             });
         });
-  </script>
+	</script>
 {% endif %}
 </body>
 </html>
